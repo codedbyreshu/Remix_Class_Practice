@@ -1,0 +1,157 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "getPatient",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "enum patientdetails.checkuptime",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "patients",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "biodescription",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "bloodgroup",
+						"type": "string"
+					},
+					{
+						"internalType": "enum patientdetails.checkuptime",
+						"name": "checkup",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_biodescription",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_bloodgroup",
+						"type": "string"
+					},
+					{
+						"internalType": "enum patientdetails.checkuptime",
+						"name": "_checkup",
+						"type": "uint8"
+					}
+				],
+				"name": "setPatient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"classpractices.sol/Day5(18-03-2026)/structmappingeg.sol": "patientdetails"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"classpractices.sol/Day5(18-03-2026)/structmappingeg.sol": {
+			"keccak256": "0x522f9a2d1326b890d1641625a3d91ce410b66485d0fabe5498d6e8437de7fee6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3a576c983fab2456b65011684ebb7bcd086e12beff86e03a0e5fe720eb5b5ae7",
+				"dweb:/ipfs/QmQPUBnqMGVSPN15nuwWgKCRRQNqggv5mVWBF3AVvWWn7u"
+			]
+		}
+	},
+	"version": 1
+}

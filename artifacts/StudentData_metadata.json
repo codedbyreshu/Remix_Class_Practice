@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
 				"name": "getStudent",
 				"outputs": [
 					{
@@ -52,8 +58,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "student",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "students",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -88,7 +100,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"classpractices.sol/Day4(13-03-2026)/struct.sol": "StructExample"
+			"classpractices.sol/Day5(18-03-2026)/structmapping.sol": "StudentData"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -102,12 +114,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"classpractices.sol/Day4(13-03-2026)/struct.sol": {
-			"keccak256": "0xb15ab50bc6366261b8dce74d26cfeea5fbbcc868ab144b8075dbee1a6cac12ce",
+		"classpractices.sol/Day5(18-03-2026)/structmapping.sol": {
+			"keccak256": "0x6de0f6ce7f3e1fb1c78667c4f61df7192c0b45bb9caa2c014fad7467c7cb51b2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7d672e8f9ae927723acce11fd41a78c43107bd510c8cc7d44aab73aca260923a",
-				"dweb:/ipfs/QmeLkdSKtijmpi5o7HEcCHnsDtJER4a2ZxH3bXaCzcsdfT"
+				"bzz-raw://b6da7c91ea383b1455f0156fd04ce580715306256f77f9fc7f6321e7271f9aa6",
+				"dweb:/ipfs/QmVuGhtkUVBkK4d9kAVaRKsx2Nry5hp182bHkdg2oXWL1c"
 			]
 		}
 	},
