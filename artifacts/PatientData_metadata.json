@@ -6,6 +6,31 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "disease",
+						"type": "string"
+					}
+				],
+				"name": "PatientAdded",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -13,7 +38,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "getStudent",
+				"name": "GetPatient",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -26,9 +51,38 @@
 						"type": "string"
 					},
 					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"name": "Patients",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "disease",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -47,43 +101,14 @@
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_age",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_disease",
+						"type": "string"
 					}
 				],
-				"name": "setStudent",
+				"name": "addPatient",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "students",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "age",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -100,7 +125,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"classpractices.sol/Day5(18-03-2026)/structmapping.sol": "StudentData"
+			"classpractices.sol/Day6(20-03-2026)/patientdata.sol": "PatientData"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -114,12 +139,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"classpractices.sol/Day5(18-03-2026)/structmapping.sol": {
-			"keccak256": "0x6de0f6ce7f3e1fb1c78667c4f61df7192c0b45bb9caa2c014fad7467c7cb51b2",
+		"classpractices.sol/Day6(20-03-2026)/patientdata.sol": {
+			"keccak256": "0xf7a2646e0dbc8096ffebfb0310ca9a02bd49d2a449da8bafe4d0aece4c421059",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b6da7c91ea383b1455f0156fd04ce580715306256f77f9fc7f6321e7271f9aa6",
-				"dweb:/ipfs/QmVuGhtkUVBkK4d9kAVaRKsx2Nry5hp182bHkdg2oXWL1c"
+				"bzz-raw://41aa5425a1e9e6717cb6e0ff626b176e86b5a257e41322dbe77daa81b5bbb996",
+				"dweb:/ipfs/QmcMFeS3tHXqPQYRP7SxB3YRWyj3LSAd7p4JRY8HAgd1uu"
 			]
 		}
 	},
