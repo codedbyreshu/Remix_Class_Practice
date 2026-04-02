@@ -1,0 +1,26 @@
+{
+  "classpractices.sol/Day7(27-03-2026)/nft.sol": {
+    "__sources__": {
+      "classpractices.sol/Day7(27-03-2026)/nft.sol": {
+        "content": "//*Backend Solidity Program*\r\n\r\n// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract SimpleNFT {\r\n\r\n    string public name = \"TecharaNFT\";\r\n    string public symbol = \"TNFT\";\r\n\r\n    uint public tokenCount;\r\n\r\n    mapping(uint => address) public ownerOf;\r\n\r\n    event Mint(address indexed to, uint tokenId);\r\n\r\n    function mint() public {\r\n        tokenCount++;\r\n        ownerOf[tokenCount] = msg.sender;\r\n\r\n        emit Mint(msg.sender, tokenCount);\r\n    }\r\n}",
+        "file": "classpractices.sol/Day7(27-03-2026)/nft.sol"
+      }
+    }
+  },
+  "classpractices.sol/Day7(27-03-2026)/nft1.sol": {
+    "__sources__": {
+      "classpractices.sol/Day7(27-03-2026)/nft1.sol": {
+        "content": "//*Backend Solidity Program*\r\n\r\n// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract SimpleNFT {\r\n\r\n    string public name = \"TecharaNFT\";\r\n    string public symbol = \"TNFT\";\r\n\r\n    uint public tokenCount;\r\n\r\n    mapping(uint => address) public ownerOf;\r\n\r\n    event Mint(address indexed to, uint tokenId);\r\n\r\n    function mint() public {\r\n        tokenCount++;\r\n        ownerOf[tokenCount] = msg.sender;\r\n\r\n        emit Mint(msg.sender, tokenCount);\r\n    }\r\n}",
+        "file": "classpractices.sol/Day7(27-03-2026)/nft1.sol"
+      }
+    }
+  },
+  "classpractices.sol/Day7(27-03-2026)/capstone.sol": {
+    "__sources__": {
+      "classpractices.sol/Day7(27-03-2026)/capstone.sol": {
+        "content": "//*Voting Capstone Project* :\r\n\r\n// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract Voting {\r\n\r\n    // ENUM\r\n    enum VotingStatus { NotStarted, Started, Ended }\r\n    VotingStatus public status;\r\n\r\n    // ADMIN\r\n    address public owner;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n        status = VotingStatus.NotStarted;\r\n    }\r\n\r\n    // STRUCT\r\n    struct Candidate {\r\n        uint id;\r\n        string name;\r\n        uint voteCount;\r\n    }\r\n\r\n    // STORAGE\r\n    mapping(uint => Candidate) public candidates;\r\n    mapping(address => bool) public hasVoted;\r\n\r\n    uint public candidateCount;\r\n\r\n    // EVENTS\r\n    event CandidateAdded(uint id, string name);\r\n    event Voted(address voter, uint candidateId);\r\n\r\n    // MODIFIER\r\n    modifier onlyOwner() {\r\n        require(msg.sender == owner, \"Not owner\");\r\n        _;\r\n    }\r\n\r\n    modifier votingActive() {\r\n        require(status == VotingStatus.Started, \"Voting not active\");\r\n        _;\r\n    }\r\n\r\n    // ADD CANDIDATE\r\n    function addCandidate(string memory _name) public onlyOwner {\r\n        candidateCount++;\r\n        candidates[candidateCount] = Candidate(candidateCount, _name, 0);\r\n\r\n        emit CandidateAdded(candidateCount, _name);\r\n    }\r\n\r\n    // START VOTING\r\n    function startVoting() public onlyOwner {\r\n        status = VotingStatus.Started;\r\n    }\r\n\r\n    // END VOTING\r\n    function endVoting() public onlyOwner {\r\n        status = VotingStatus.Ended;\r\n    }\r\n\r\n    // VOTE FUNCTION\r\n    function vote(uint _candidateId) public votingActive {\r\n        require(!hasVoted[msg.sender], \"Already voted\");\r\n        require(_candidateId > 0 && _candidateId <= candidateCount, \"Invalid candidate\");\r\n\r\n        candidates[_candidateId].voteCount++;\r\n        hasVoted[msg.sender] = true;\r\n\r\n        emit Voted(msg.sender, _candidateId);\r\n    }\r\n\r\n    // GET WINNER\r\n    function getWinner() public view returns (string memory winnerName) {\r\n        require(status == VotingStatus.Ended, \"Voting not ended\");\r\n\r\n        uint maxVotes = 0;\r\n        uint winnerId = 0;\r\n\r\n        for (uint i = 1; i <= candidateCount; i++) {\r\n            if (candidates[i].voteCount > maxVotes) {\r\n                maxVotes = candidates[i].voteCount;\r\n                winnerId = i;\r\n            }\r\n        }\r\n\r\n        return candidates[winnerId].name;\r\n    }\r\n}",
+        "file": "classpractices.sol/Day7(27-03-2026)/capstone.sol"
+      }
+    }
+  }
+}
