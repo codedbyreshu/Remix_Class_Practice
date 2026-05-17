@@ -7,7 +7,7 @@ contract Voting {
 
     // ENUM
     enum VotingStatus { NotStarted, Started, Ended }
-    VotingStatus public status;
+    VotingStatus public status
 
     // ADMIN
     address public owner;
